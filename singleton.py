@@ -8,4 +8,3 @@ class Singleton(object):
         if not cls._instance:
             cls._instance = object.__new__(cls, *args, **kwargs)
         return cls._instance
-
