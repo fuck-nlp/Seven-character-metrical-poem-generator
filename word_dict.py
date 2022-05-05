@@ -1,10 +1,10 @@
 # -*- coding:utf-8 -*-
 
 from var import *
-import singleton
+from singleton import Singleton
 
 
-class Word_Dict(singleton.Singleton):
+class Word_Dict(Singleton):
     _word_to_int: dict = {}
     _int_to_word: list = []
 
@@ -33,7 +33,10 @@ class Word_Dict(singleton.Singleton):
         return len(self._int_to_word)
 
     def __iter__(self):
-        return iter(self._int_to_word)
+        return iter(self._word_to_int)
+
+    def __contains__(self, ch: str):
+        return ch in self._word_to_int
 
 
 # For test

@@ -2,11 +2,15 @@
 
 import os
 
-ROOT_DIR = os.path.dirname(__file__)
-RAW_DIR = os.path.join(ROOT_DIR, "raw")
-DATA_DIR = os.path.join(ROOT_DIR, "data")
+ROOT_DIR: str = os.path.dirname(__file__)
+RAW_DIR: str = os.path.join(ROOT_DIR, "raw")
+DATA_DIR: str = os.path.join(ROOT_DIR, "data")
 
-WORD_DICT_PATH = os.path.join(DATA_DIR, "word_dict.txt")
+CORPUS_PATH: str = os.path.join(RAW_DIR, "corpus_zh_hans.txt")
+WORD_DICT_PATH: str = os.path.join(DATA_DIR, "word_dict.txt")
+WORD_VEC_PATH: str = os.path.join(DATA_DIR, "word_vec.npy")
 
-START_OF_SENTENCE = '^'
-END_OF_SENTENCE = '$'
+START_OF_SENTENCE: str = '^'
+END_OF_SENTENCE: str = '$'
+
+WORD_VEC_DIMS: int = 256

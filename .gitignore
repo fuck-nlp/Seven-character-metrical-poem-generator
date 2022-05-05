@@ -4,4 +4,8 @@
 # VS Code User settings
 .vscode/
 
+# Python Cache
 __pycache__/
+
+# Word Vector... Which is 100 MB+
+data/word_vec.npy
