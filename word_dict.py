@@ -40,7 +40,6 @@ class Word_Dict(Singleton):
 
 
 # For test
-
 if __name__ == "__main__":
     word_dict = Word_Dict()
     for i in range(100):
