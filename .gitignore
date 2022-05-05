@@ -3,3 +3,5 @@
 
 # VS Code User settings
 .vscode/
+
+__pycache__/
