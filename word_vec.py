@@ -13,6 +13,7 @@ def _gen_word_vec():
     poems = Poems()
     # poems = [poem[0] + poem[1] + poem[2] + poem[3] + poem[4] + poem[5] + poem[6] + poem[7] for poem in poems]
     poems = [','.join(poem) for poem in poems]
+    print(poems[1])
     model = gensim.models.Word2Vec(poems, vector_size=WORD_VEC_DIMS, min_count=1)
     embedding = numpy.random.uniform(-1.0, 1.0, [len(word_dict), WORD_VEC_DIMS])
     for i, ch in enumerate(word_dict):
@@ -31,6 +32,7 @@ class Word_Vec(Singleton):
             return []
         keyword_vec = self._embedding[self._word_dict.word_to_int(keyword)]
         ans: list = []
+        # TODO: Use numpy to find similar words ----lzj
         for index in range(0, len(self._word_dict)):
             sim = numpy.sum(numpy.square(keyword_vec - self._embedding[index]))
             if len(ans) < num:
@@ -51,4 +53,4 @@ if __name__ == "__main__":
     word_vec = Word_Vec()
     keyword = input()
     print("find similar words of {}".format(keyword))
-    print(word_vec.similar_word(keyword, 20))
+    print(word_vec.similar_word(keyword, 40))

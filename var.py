@@ -13,4 +13,5 @@ WORD_VEC_PATH: str = os.path.join(DATA_DIR, "word_vec.npy")
 START_OF_SENTENCE: str = '^'
 END_OF_SENTENCE: str = '$'
 
-WORD_VEC_DIMS: int = 256
+NUM_OF_SENTENCES: int = 8
+WORD_VEC_DIMS: int = 128
