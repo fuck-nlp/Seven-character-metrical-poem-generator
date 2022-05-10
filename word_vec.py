@@ -53,4 +53,4 @@ if __name__ == "__main__":
     word_vec = Word_Vec()
     keyword = input()
     print("find similar words of {}".format(keyword))
-    print(word_vec.similar_word(keyword, 40))
+    print(word_vec.similar_word(keyword, 8))
